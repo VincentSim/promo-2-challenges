@@ -4,5 +4,7 @@ require 'date'
 
 
 def age_in_days(day, month, year)
+ birthday=DateTime.new(year, month, day)
+ (DateTime.now - birthday).to_i
   #TODO: return the age expressed in days given the day, month, and year of birth
 end
