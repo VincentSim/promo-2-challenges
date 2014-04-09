@@ -2,18 +2,20 @@ require_relative "wagon_sort"
 
 students = []
 
-begin
-  puts students.empty? ? "Type a student name:" : "Type another student name (or press enter to finish):"
-  name = gets
-  name.chomp! if name
-  students << name
-  # TODO: Add the name we just gotto the students array
+name = gets.chomp
 
-end while name != ""
+until name == ""
+  puts students.empty? ? "Type a student name:" : "Type another student name (or press enter to finish):"
+  students << name
+  name = gets.chomp
+end
+
 
 wagon = wagon_sort(students)
-wagon.each do |eleve| puts "-#{eleve}"
-end
+
+puts "congratulations ! Your wagon has #{wagon.length} students"
+# printer ts les eleves
+
 
 
 # TODO: Call `wagon_sort` method and display the sorted student list
