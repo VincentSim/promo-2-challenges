@@ -13,5 +13,6 @@ class Playboy
   def meets(lady)
     @conquests << lady unless @married
   end
-
+  attr_reader :name, :nationality, :conquests
+  attr_accessor :hair_length
 end
