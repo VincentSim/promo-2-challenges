@@ -17,9 +17,9 @@ while true
   puts "2. Read your posts"
   puts "3. Delete all posts"
   puts "4. Exit"
-  
+
 	choice =  gets.chomp.to_i
-	
+
 	case choice
   when 1
     name = ask_and_get("name")
@@ -28,15 +28,17 @@ while true
     post = { name: name, source_url: source_url, date: Time.now, rating: rating }
     create_post(db, post)
   when 2
-    get_posts(db)
+    get_posts(db).each{|post|  puts "Name: #{post[1]}, Source: #{post[2]}, date: #{Time.parse(post[3]).strftime('%d/%m/%Y (%H:%M)')}, rating: #{post[4]}"}
+
+
     #TODO: prints nicely the results from DB queries (you could use #strftime to format datetime display)
   when 3
     delete_posts(db)
-    
+
   #TODO: add other CRUD tasks to your interface if you wish!
-  when 4 
+  when 4
     break
-	end 
-	
+	end
+
 end
 
