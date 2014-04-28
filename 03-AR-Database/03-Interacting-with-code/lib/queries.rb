@@ -1,7 +1,7 @@
 require 'sqlite3'
 
 # opens the database
-database_path = "db/jukebox.sqlite"
+database_path = File.join(File.dirname(__FILE__), 'db/jukebox.sqlite')
 db = SQLite3::Database.new(database_path)
 
 def number_of_rows(db, table_name)
@@ -31,8 +31,3 @@ def long_tracks(db, min_length)
 end
 #puts long_tracks(db,45)
 
-puts "There are #{number_of_rows(db,"Artist")} artists"
-puts "There are #{number_of_rows(db,"Track")} tracks"
-puts "There are #{number_of_rows(db,"Album")} albums"
-puts "There are #{number_of_rows(db,"Genre")} genres"
-puts "There are #{number_of_rows(db,"MediaType")} media types"
