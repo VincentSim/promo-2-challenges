@@ -15,6 +15,17 @@ while true
   until logged_in
     puts "Please login with your <id>"
     #TODO: instantiate a user with his <id>
+    logID = gets.chomp
+    if User.find(logID) == nil
+      puts "Name please"
+      name = gets.chomp
+      puts "Address please"
+      adress = gets.chomp
+      user = User.create!({name: name, email: adress})
+    else
+      user = User.find(logID)
+      logged_in = true
+    end
   end
 
   puts "Hey #{user.name}, what do you want to do today? Enter <task_id>"
@@ -22,9 +33,9 @@ while true
   puts "2. Read your posts"
   puts "3. Delete all posts"
   puts "4. Exit"
-  
+
 	choice =  gets.chomp.to_i
-	
+
 	case choice
   when 1
     name = ask_and_get("name")
@@ -35,9 +46,9 @@ while true
   when 2
     #TODO: use ActiveRecord to get all posts of the current user
   when 3
-    #TODO: use ActiveRecord to delete all posts of current user 
-  when 4 
+    #TODO: use ActiveRecord to delete all posts of current user
+  when 4
     break
-	end 
-	
+	end
+
 end
