@@ -56,3 +56,94 @@ attr_reader :height
   end
 
 end
+
+
+
+
+###########Solution 1#######################
+class Animal
+  def breathe
+
+  end
+end
+###########Solution 2#######################
+class Dog < Animal         #Dog herite des méthode d'instance
+  def bark                 #mais aussi des variables d'instance
+    "Woof"                 #mais pas des 'private'
+  end
+end
+
+#########################################################
+deck =  Deck.new
+
+deck.fill_deck
+
+#######################################################
+class Grader
+  def self.average(grades)
+    # TODO Compute average
+  end
+end
+
+Grader.average([15, 12, 18]) #on a bien une méthode de classe
+
+#Il est mieux de faire sans mais bon.........
+
+#on peut surcharger une méthode = la réassigner
+class Animal
+  def breathe
+    "Ibreath"
+  end
+end
+
+class Dog < Animal
+  def breathe
+    print "I am a dog and"
+    super #on rappelle la méthode de la classe parent
+  end
+end
+
+class Cat < Animal
+end
+
+puts Cat.new.breathe
+puts Dog.new.breathe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

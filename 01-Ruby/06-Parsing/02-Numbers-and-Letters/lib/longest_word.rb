@@ -16,12 +16,15 @@ end
 grid
 end
 
-#def run_game(attempt, grid, start_time, end_time)
+def run_game(attempt, grid, start_time, end_time)
   #TODO: runs the game and return detailed hash of result
-#end
-
-uri = URI.parse("http://api.wordreference.com/0.8/80143/json/enfr/apple").read
+result ={}
+uri = URI.parse("http://api.wordreference.com/0.8/80143/json/enfr/#{attempt}").read
 jason = JSON.parse (uri)
-puts term_0 = jason["term0"]["PrincipalTranslations"]["0"]["OriginalTerm"]["term"]
+result = {}
+term_0 = jason["term0"]["PrincipalTranslations"]["0"]["OriginalTerm"]["term"]
+end
+
+
 
 

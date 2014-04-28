@@ -21,4 +21,8 @@ class Controller
     @cookbook.destroy(recipe)
     @cookbook.save
   end
+
+  def web_import(recipe)
+    @cookbook.import(recipe)
+    @cookbook.save
 end

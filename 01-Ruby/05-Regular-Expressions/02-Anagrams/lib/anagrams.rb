@@ -14,5 +14,3 @@ def anagrams_on_steroids?(a_string, another_string)
   tableau_2.each{|x| hash_2[x] = tableau_2.count(x)}
   hash_1 == hash_2 ? true : false
 end
-
- puts anagrams_on_steroids?("Monica Lewinsky!", "Nic silky woman")

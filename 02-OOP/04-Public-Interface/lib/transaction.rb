@@ -9,6 +9,7 @@ class Transaction
 
   def to_s
     # Nicely print transaction infos using Time#strftime.
+    "Transaction of #{@amount} done on #{@date}"
 
   end
 end

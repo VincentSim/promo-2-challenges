@@ -3,6 +3,9 @@ require_relative 'transaction.rb'
 class DepositError < StandardError
 end
 
+class WithdrawError < StandardError
+end
+
 class BankAccount
 
   # Contract for the BankAccount class
@@ -31,6 +34,7 @@ class BankAccount
   def withdraw(amount)
     # TODO: Call add_transaction with the right argument
     # TODO: returns a string with a message
+    raise WithdrawError, "Insufficient deposit" unless amount > 0
     add_transaction(-amount)
     "Thank you"
   end
@@ -74,7 +78,7 @@ class BankAccount
   def add_transaction(amount)
     # TODO: add the amount in the transactions array
     # TODO: update the current position (which represents the balance of the account)
-     @transactions<< amount
+     @transactions << amount
      @position += amount
   end
 

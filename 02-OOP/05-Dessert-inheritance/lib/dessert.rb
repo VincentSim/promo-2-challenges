@@ -29,11 +29,13 @@ class JellyBean < Dessert
 attr_reader :flavor
 
   def delicious?
-    unless @flavor == "black licorice"
-     true
-    else
-     false
-    end
+   # unless @flavor == "black licorice"
+   #  true
+   # else
+   #  false
+   # end
+
+   @flavor != "black licorice"
   end
 
 end

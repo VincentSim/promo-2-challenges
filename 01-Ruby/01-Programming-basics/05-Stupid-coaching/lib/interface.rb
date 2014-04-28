@@ -4,3 +4,5 @@ print "Quelque chose à dire?"
 your_message = gets.chomp
 
 print coach_answer(your_message)
+until your_message == "Au revoir!"
+

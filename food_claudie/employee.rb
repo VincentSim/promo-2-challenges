@@ -4,7 +4,7 @@ require_relative 'restaurant'
 
 class Employee
 
-  attr_reader :name, :password
+  attr_reader :name, :password, :d_boy
 
   def initialize (name, password)
     @name = name

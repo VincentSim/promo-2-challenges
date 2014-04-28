@@ -25,6 +25,7 @@ def mail_joke(email)
 end
 
 
+
 #puts "boris@gmail.com".match(/(\w+|\.)+@(live|gmail|yahoo)+\./)
 #puts "vinvin@gmail.fr".include?("eu"||"com")
 #puts "vincent.simon@gadz.org".match(/^\w+([-_.]?\w+)+[@](\w+[-_]?)+[.]\w+/)
