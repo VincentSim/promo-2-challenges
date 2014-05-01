@@ -31,7 +31,11 @@ while true
 
   when 2
     #TODO: use ActiveRecord to get all entries from the DB
-    Post.all.each{|post| puts "Name: #{post.name}, Source: #{post.source_url}, date: #{post.date}, rating: #{post.rating}"}
+    Post.all.each{|post| puts
+    "Name: #{post.name},
+    Source: #{post.source_url},
+    date: #{post.date},
+    rating: #{post.rating}"}’
 
   when 3
     #TODO: use ActiveRecord to delete all entries from the DB
