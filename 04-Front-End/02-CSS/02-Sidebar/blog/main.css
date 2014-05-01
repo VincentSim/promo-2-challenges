@@ -6,7 +6,7 @@
 
 h1{
   display: block;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
   height: 2em;
   margin-bottom: 0;
 
@@ -21,16 +21,18 @@ nav ul{
 }
 
 .content{
+  display:block;
   width:75%;
   float: right;
-  padding:5%;
+  padding-right:5%;
+  padding-left: 5%;
   margin: 0;
-  border-left: 1px solid black;
+  border-left: 1px solid grey;
 }
 
 body footer{
   display: block;
-  border-top: 1px solid black;
+  border-top: 1px solid grey;
   height: 2em;
   padding: 2em;
   clear: both;
