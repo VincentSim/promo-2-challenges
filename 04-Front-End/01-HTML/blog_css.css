@@ -1,0 +1,16 @@
+.soundcloud{
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35% auto;
+  padding-top: 10px;
+
+}
+
+body{
+  background: #F2F2F2;
+  font-family: Inconsolata;
+}
+
+.logo{
+  background-image: "photos_blog/Gionartologo.png"
+}
