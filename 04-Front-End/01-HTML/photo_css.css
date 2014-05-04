@@ -4,6 +4,10 @@
   margin-right: 30% auto;
 }
 
+h1, h2{
+  text-align: center;
+}
+
 body{
   background: #F2F2F2;
   font-family: Inconsolata;
@@ -11,4 +15,13 @@ body{
 
 .logo{
   background-image: "photos_blog/Gionartologo.png"
+}
+
+footer{
+  width: 100%;
+  background-color: #D5DBDB;
+  bottom: 0px;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
 }

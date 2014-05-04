@@ -10,7 +10,25 @@ body{
   background: #F2F2F2;
   font-family: Inconsolata;
 }
-
-.logo{
-  background-image: "photos_blog/Gionartologo.png"
+h1, h2{
+  text-align: center;
 }
+
+article{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.citation{
+  text-align: right;
+}
+
+footer{
+  width: 100%;
+  background-color: #D5DBDB;
+  bottom: 0px;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
