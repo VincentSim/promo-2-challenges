@@ -1,0 +1,48 @@
+.photo{
+  width: 10%;
+  margin-left: 45%;
+  margin-right: 45% auto;
+}
+
+h1, h2{
+  text-align: center;
+}
+
+body{
+  background: #F2F2F2;
+  font-family: Inconsolata;
+}
+
+.logo{
+  background-image: "photos_blog/Gionartologo.png"
+}
+
+footer{
+  width: 100%;
+  background-color: #D5DBDB;
+  bottom: 0px;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.back{
+  width:100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  top:0;
+  bottom: 0;
+}
+
+div .photo2{
+  opacity: 1;
+  position: relative;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35% auto;
+  margin-top: 10%;
+
+
+}
