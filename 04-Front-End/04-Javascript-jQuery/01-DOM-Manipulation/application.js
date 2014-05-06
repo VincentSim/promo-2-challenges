@@ -8,12 +8,15 @@
 function run_challenges() {
 
   // Ex 1. Read the content of the email input
-  var email = 'boris@lewagon.org';  // TODO: replace null, keep the email variable.
+  //var email = 'boris@lewagon.org';
+    var email = $('#email').val();
+   // TODO: replace null, keep the email variable.
 
 
 
   // Ex 2. Fill the content of the email input with your email
- $('input').attr('value', 'vincent.simon@gmail.com');
+  $('#email').val('vincent.simon@gmail.com')
+ //$('input').attr('value', 'vincent.simon@gmail.com');
 
 
 
