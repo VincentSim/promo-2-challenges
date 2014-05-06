@@ -1,0 +1,49 @@
+.racer_table td {
+  background-color: white;
+  height: 80px;
+  width: 200px;
+}
+
+.racer_table td.active {
+  background-color: black;
+  background-image:url('player_1.png');
+  background-size: 100%;
+}
+
+.racer_table td.arrivee {
+  height: 80px;
+  width: 80px;
+  border: 5px solid black;
+  background-image:url('final.png');
+}
+
+.overlay{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right:0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.photo{
+  position: absolute;
+  top: 10%;
+}
+
+.photo-wrapper{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right:0;
+  left: 0;
+  padding:2%;
+  text-align: center;
+}
+
+.photo-wrapper img{
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
