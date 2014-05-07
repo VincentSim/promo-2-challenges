@@ -2,7 +2,8 @@ var GRID_SIZE = 30;
 var PLAYER1_KEY = 68; // D
 var PLAYER2_KEY = 76; // L
 var SESSION_ID = null;
-var DATA = null;
+var START = null;
+
 
 // 1 On nous demande le chargement de la page et on récupère l'ID du jeu
 $.get( "http://wagon-race-api.herokuapp.com/game/session/new", function( data ) {
@@ -24,12 +25,30 @@ btn.click(function() {
 
 $('form').submit(function(event) {
   event.preventDefault();
-  DATA = $( "form" ).serializeArray();
 
-  $('table').show();
-  $('form').hide();
-  generate_grid(GRID_SIZE);
-  give_player_hints(PLAYER1_KEY, PLAYER2_KEY);
+  var players = {
+    players: [
+      { name: $('form').find( "input[name='player1']" ).val() },
+      { name: $('form').find( "input[name='player2']" ).val() }
+    ]
+  };
+
+
+
+  $.ajax({
+    type:'POST',
+    url:'http://wagon-race-api.herokuapp.com/game/session/'+SESSION_ID+'/new',
+    data:  JSON.stringify(players),
+    contentType: 'application/json',
+    success:function(data){
+    $('table').show();
+    $('form').hide();
+    generate_grid(GRID_SIZE);
+    give_player_hints(PLAYER1_KEY, PLAYER2_KEY);}
+    START = new Date();
+
+  });
+
 
   $(document).on('keyup', function(event) {
       // d = 68
@@ -41,6 +60,10 @@ $('form').submit(function(event) {
           update_player_position("player2", 1);
       }
   });
+
+    var result ={
+
+  }
 });
 })
 
@@ -54,6 +77,7 @@ function update_player_position(player, number) {
 
     console.log(previous_position + number, length);
     if ((previous_position + number) >= length) {
+        var fin = $.now();
         alert(player + ' has won !');
         reset();
     }
