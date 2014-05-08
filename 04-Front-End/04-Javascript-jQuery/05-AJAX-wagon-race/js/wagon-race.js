@@ -26,10 +26,13 @@ btn.click(function() {
 $('form').submit(function(event) {
   event.preventDefault();
 
+
+  var player1_name = $('form').find( "input[name='player1']" ).val();
+  var player2_name = $('form').find( "input[name='player2']" ).val();
   var players = {
     players: [
-      { name: $('form').find( "input[name='player1']" ).val() },
-      { name: $('form').find( "input[name='player2']" ).val() }
+      { name: player1_name},
+      { name:  player2_name}
     ]
   };
 
@@ -41,11 +44,15 @@ $('form').submit(function(event) {
     data:  JSON.stringify(players),
     contentType: 'application/json',
     success:function(data){
-    $('table').show();
-    $('form').hide();
-    generate_grid(GRID_SIZE);
-    give_player_hints(PLAYER1_KEY, PLAYER2_KEY);}
-    START = new Date();
+      console.log(data);
+      $('table').show();
+      $('form').hide();
+      generate_grid(GRID_SIZE);
+      give_player_hints(PLAYER1_KEY, PLAYER2_KEY);},
+    error: function(data){
+      alert('API is down');
+    }
+      START = new Date();
 
   });
 
